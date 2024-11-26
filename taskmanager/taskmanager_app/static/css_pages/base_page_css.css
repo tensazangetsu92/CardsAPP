@@ -1,0 +1,125 @@
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('OpenSans.ttf') format('truetype');
+}
+
+QPushButton:pressed { background-color: transparent; border: none; }
+
+/* Общие стили для приложения */
+QWidget {
+    background-color: #313338; /* Фон, похожий на Discord */
+    color: #ffffff; /* Цвет текста */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+    font-size: 20px;
+}
+
+QLineEdit#collection_input {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #212326;
+    border: 1px solid #7289da; /* Граница текстового поля */
+}
+
+/* Стиль для QLabel */
+QLabel#status_label {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #212326;
+}
+
+QPushButton {
+    font-size: 24px;
+    color: white;
+    padding: 5px;
+    margin: 3px;
+    margin-right: 10px;
+    border: 2px solid #495b9c;
+    border-radius: 3px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #7289da, stop:1 #5e71b5); /* Линейный градиент */
+    margin: 0 10px;
+    padding: 10px 0;
+    border-radius: 5px;
+
+
+}
+
+QPushButton:hover {
+    background-color: #5b6eae; /* Цвет кнопки при наведении */
+}
+
+QTextEdit {
+    background-color: #23272a; /* Цвет фона текстового поля */
+    color: #ffffff; /* Цвет текста */
+    border: 1px solid #7289da; /* Граница текстового поля */
+    border-radius: 5px; /* Скруглённые углы */
+    padding: 5px; /* Отступы внутри текстового поля */
+}
+
+QListWidget {
+    border: none;
+    background-color: #2c2f33; /* Цвет фона списка */
+}
+
+
+#item_widget {
+    margin: 5px;
+    height: 100px;
+    border: 2px solid #1f1f1f;
+    border-radius: 5px;
+    color: #ffffff; /* Цвет текста */
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #7289da, stop:1 #5e71b5); /* Линейный градиент */
+}
+
+#item_widget QLabel {
+    margin: 15px;
+    background: none;
+    font-size: 24px;
+}
+
+#item_widget QPushButton {
+    font-size: 20px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #7289da, stop:1 #6879BC); /* Линейный градиент */
+    padding: 5px;
+    margin: 3px;
+    margin-right: 10px;
+    border: 2px solid #495b9c;
+    border-radius: 3px;
+}
+
+#item_widget QPushButton:hover {
+    background-color: #6575B7; /* Цвет выделенного элемента списка */
+}
+
+QMessageBox QPushButton {
+    width: 70px;
+}
+
+QMessageBox QLabel {
+    padding-left: -3px;
+}
+
+#collection_label {
+    margin-left: 10px;
+}
+
+QInputDialog QPushButton {
+    width: 80px;
+}
+QInputDialog QLineEdit {
+    background-color: #23272a; /* Цвет фона текстового поля */
+    color: #ffffff; /* Цвет текста */
+    border: 1px solid #7289da; /* Граница текстового поля */
+    border-radius: 5px; /* Скруглённые углы */
+    padding: 5px; /* Отступы внутри текстового поля */
+    min-width: 300px;
+}
+
+
+
+
