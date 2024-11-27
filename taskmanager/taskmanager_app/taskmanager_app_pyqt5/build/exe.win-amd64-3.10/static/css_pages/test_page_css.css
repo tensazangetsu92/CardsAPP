@@ -1,0 +1,61 @@
+/* Основной стиль для страницы */
+QWidget {
+    background-color: #e0e0e0; /* светло-серый фон */
+}
+
+QLabel#status_label {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #212326;
+}
+
+QLabel#cycle_label {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #212326;
+    padding-left: 247px;
+}
+
+/* Стиль для кнопок */
+QPushButton {
+    background-color: #51545c;
+    border: 2px solid #4d4d4d;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+QPushButton:hover {
+    background-color: #5c5f69; /* серый фон при наведении */
+}
+
+/* Стиль для кнопки "Word" */
+QPushButton#word_button {
+    font-size: 24px; /* увеличенный шрифт */
+    background-color: #F6F6F6   ;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+QPushButton#word_button:hover {
+    background-color: #DCDCDC; /* белый фон кнопок */
+}
+
+#display_words {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #212326;
+}
