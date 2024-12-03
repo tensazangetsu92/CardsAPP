@@ -24,52 +24,19 @@ class App(QWidget):
         self.last_collection = None
         self.load_collections()
 
-    # def start_django_server(self):
-    #     django_command = [r"C:\\Users\\alex\\PycharmProjects\\TaskManager\\.venv\\Scripts\\python.exe",
-    #                       r"C:\\Users\\alex\\PycharmProjects\\TaskManager\\taskmanager\\manage.py", "runserver", '--noreload']
-    #
-    #     try:
-    #         if os.name == 'nt':
-    #             self.server_process = subprocess.Popen(django_command, creationflags=subprocess.CREATE_NO_WINDOW,
-    #                                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #         else:
-    #             self.server_process = subprocess.Popen(django_command, preexec_fn=os.setsid)
-    #     except Exception as e:
-    #         print(f"Ошибка при запуске сервера Django: {str(e)}")
     def start_django_server(self):
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-
-        python_path = os.path.join(base_dir,'..', '..' ,'..' ,'..', '.venv', 'Scripts', 'python.exe') if os.name == 'nt' else os.path.join(
-            base_dir,'..', '..' ,'..' ,'..', '.venv', 'bin', 'python')
-        manage_py_path = os.path.join(base_dir,'..', '..' ,'..' ,'..', 'taskmanager', 'manage.py')
-
-
-        # Проверяем, что пути существуют
-        if not os.path.exists(python_path):
-            print(f"Python в виртуальном окружении не найден по пути {python_path}")
-            return
-
-        if not os.path.exists(manage_py_path):
-            print(f"Файл manage.py не найден по пути {manage_py_path}")
-            return
-
-        # Команда для запуска сервера
-        django_command = [python_path, manage_py_path, "runserver", '--noreload']
-
-        # C:\Users\alex\PycharmProjects\TaskManager\taskmanager\taskmanager_app\taskmanager_app_pyqt5\pages
-        # C:\Users\alex\PycharmProjects\TaskManager\taskmanager\taskmanager_app\taskmanager_app_pyqt5\pages\..\..\..\..\.venv\Scripts\python.exe
-        # C:\Users\alex\PycharmProjects\TaskManager\taskmanager\taskmanager_app\taskmanager_app_pyqt5\pages\..\..\..\..\taskmanager\manage.py
+        django_command = [r"C:\\Users\\alex\\PycharmProjects\\TaskManager\\.venv\\Scripts\\python.exe",
+                          r"C:\\Users\\alex\\PycharmProjects\\TaskManager\\taskmanager\\manage.py", "runserver", '--noreload']
 
         try:
-            # Запускаем сервер в зависимости от ОС
-            if os.name == 'nt':  # Windows
+            if os.name == 'nt':
                 self.server_process = subprocess.Popen(django_command, creationflags=subprocess.CREATE_NO_WINDOW,
                                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            else:  # Linux / macOS
+            else:
                 self.server_process = subprocess.Popen(django_command, preexec_fn=os.setsid)
-            print("Django server started successfully")
         except Exception as e:
             print(f"Ошибка при запуске сервера Django: {str(e)}")
+
 
     def initUI(self):
         self.setWindowTitle('CardsAPP')

@@ -29,7 +29,6 @@ def add_collection(request):
 
 @csrf_exempt
 def rename_collection(request, collection_id):
-    print('ASD')
     if request.method == 'PUT':
         try:
             print("asd")

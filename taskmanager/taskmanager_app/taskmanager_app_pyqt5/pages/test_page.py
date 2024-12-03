@@ -8,8 +8,6 @@ from PyQt5.QtWidgets import QWidget, QPushButton, QLabel, QVBoxLayout, QHBoxLayo
 import requests
 from random import choice
 
-from django.utils.lorem_ipsum import words
-
 
 class TestPage(QWidget):
     def __init__(self, collection_id, stack, parent):
@@ -53,11 +51,9 @@ class TestPage(QWidget):
 
         self.setLayout(self.layout)
 
-        if getattr(sys, 'frozen', False):
-            static_css_path = os.path.join(Path(__file__).resolve().parent.parent.parent, "css_pages","test_page_css.css")
-        else:
-            static_css_path = os.path.join(Path(__file__).resolve().parent.parent.parent, "static", "css_pages", "test_page_css.css")
 
+        static_css_path = os.path.join(Path(__file__).resolve().parent.parent.parent, "static","css_pages", "test_page_css.css")
+        print(static_css_path)
         with open(static_css_path, "r", encoding='utf-8') as file:
             self.setStyleSheet(file.read())
 

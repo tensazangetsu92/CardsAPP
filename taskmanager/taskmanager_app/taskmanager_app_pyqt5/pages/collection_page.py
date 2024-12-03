@@ -44,6 +44,7 @@ class CollectionPage(QWidget):
         self.cards_field.clear()
         for card in cards:
             self.cards_field.append(f"{card['text_english']} = {card['text_russian']}")
+
     def display_error(self, message):
         self.status_label.setText(message)
 
@@ -136,6 +137,5 @@ class CollectionPage(QWidget):
         self.stack.removeWidget(self)
         self.deleteLater()
         self.stack.setCurrentIndex(0)
-        print(self.parent.last_collection)
         self.parent.collection_list.setCurrentRow(self.parent.last_collection)
         self.parent.collection_list.setFocus()
